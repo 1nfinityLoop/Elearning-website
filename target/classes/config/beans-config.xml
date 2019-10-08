@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 	<bean id="enseignantDao" class="com.mycompany.elearn.dao.impl.EnseignantDaoImpl"></bean>
+ 	<bean id="eneignantService" class="com.mycompany.elearn.services.impl.EnseignantServiceImpl">
+ 		<property name="dao" ref="enseignantDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="etudiantDao" class="com.mycompany.elearn.dao.impl.EtudiantDaoImpl"></bean>
+ 	<bean id="etudiantService" class="com.mycompany.elearn.services.impl.EtudiantServiceImpl">
+ 		<property name="dao" ref="etudiantDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="fichierDao" class="com.mycompany.elearn.dao.impl.FichiersDaoImpl"></bean>
+ 	<bean id="fichierService" class="com.mycompany.elearn.services.impl.FichiersServiceImpl">
+ 		<property name="dao" ref="fichierDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="coursDao" class="com.mycompany.elearn.dao.impl.CoursDaoImpl"></bean>
+ 	<bean id="coursService" class="com.mycompany.elearn.services.impl.CoursServiceImpl">
+ 		<property name="dao" ref="coursDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="quizDao" class="com.mycompany.elearn.dao.impl.QuizDaoImpl"></bean>
+ 	<bean id="quizService" class="com.mycompany.elearn.services.impl.QuizServiceImpl">
+ 		<property name="dao" ref="quizDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="questionDao" class="com.mycompany.elearn.dao.impl.QuestionDaoImpl"></bean>
+ 	<bean id="questionService" class="com.mycompany.elearn.services.impl.QuestionServiceImpl">
+ 		<property name="dao" ref="questionDao"></property>
+ 	</bean>
+ 	
+ 	<bean id="NotesDao" class="com.mycompany.elearn.dao.impl.NotesDaoImpl"></bean>
+ 	<bean id="NotesService" class="com.mycompany.elearn.services.impl.NotesServiceImpl">
+ 		<property name="dao" ref="NotesDao"></property>
+ 	</bean>
+ 	
+ 	
+ </beans>
